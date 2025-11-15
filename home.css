@@ -7,11 +7,24 @@ header{
 body{
     text-align: center;
     color: blue;
+    background-color: gray;
 }
 
-body .clac{
-    text-align: left;
-    color: blue;
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image-box img {
+    width: 150px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 footer{
