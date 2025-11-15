@@ -1,0 +1,21 @@
+header{
+    color:red;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+body{
+    text-align: center;
+    color: blue;
+}
+
+body .clac{
+    text-align: left;
+    color: blue;
+}
+
+footer{
+    color:black;
+    border-top: 2px solid black;
+    text-align: center;
+}
