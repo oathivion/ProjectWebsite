@@ -1,0 +1,41 @@
+
+
+{% block content %}
+    <h2>Calculator</h2>
+
+    <form method="post">
+        <label>
+            First number:
+            <input type="text" name="input1">
+        </label>
+
+        <label>
+            Operation:
+            <select name="math_type">
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+            </select>
+        </label>
+
+        <label>
+            Second number:
+            <input type="text" name="input2">
+        </label>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {%if error%}
+    <div class = "error">
+        {{error}}
+    </div>
+    {%endif%}
+
+    {% if result is not none %}
+        <div class="result">
+        Result: {{ result }}
+        </div>
+    {% endif %}
+{% endblock %}
