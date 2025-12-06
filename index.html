@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="home.css">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <link rel="stylesheet" href="home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<header>
-    <h1 id="rainbow-js">My wonderful website</h1>
-</header>
 <body>
-    <script src="home.js"></script>
+    <div class="page">
+        <header>
 
-    
-    
-    
+        </header>
 
-    <div class="image-row">
-        <div class="image-box">
-            <img src="to-do-list-img.png" alt="To-Do List">
-            <a href="https://github.com/oathivion/ProjectWebsite/blob/main/Calculator.py">Calculator Application</a>
-        </div>
+        <main>
+            <section class="hero">
+                <h1 id="rainbow-js">Welcome to My Projects</h1>
+                <p class="hero-subtitle">
+                    A small collection of things I’ve built while learning and experimenting.
+                </p>
+            </section>
 
-        <div class="image-box">
-            <img src="calc_img.jpg" alt="Calculator">
-            <a href="https://github.com/oathivion/ProjectWebsite/blob/main/To_Do_App.py">To-Do App</a>
-        </div>
+            <section class="projects">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="to-do-list-img.png" alt="To-Do List App preview" class="project-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>Calculator Application</h3>
+                            <p>A simple, clean calculator written in Python that handles everyday math.</p>
+                            <a class="project-link" href="https://github.com/oathivion/ProjectWebsite/blob/main/Calculator.py" target="_blank" rel="noopener noreferrer">
+                                View on GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="calc_img.jpg" alt="Calculator image" class="project-image">
+                        </div>
+                        <div class="project-content">
+                            <h3>To-Do App</h3>
+                            <p>A lightweight to-do application to keep track of tasks and boost productivity.</p>
+                            <a class="project-link" href="https://github.com/oathivion/ProjectWebsite/blob/main/To_Do_App.py" target="_blank" rel="noopener noreferrer">
+                                View on GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p class="footer-text">
+                Employers and or Collaborators: <a href="tel:15034286232">503-428-6232</a>
+            </p>
+        </footer>
     </div>
 
-
-    
-
-    
+    <script src="home.js"></script>
 </body>
-<footer>
-    <p>Feel free to text or call at 503-428-6232</p>
-</footer>
 </html>
