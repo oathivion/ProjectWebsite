@@ -1,0 +1,60 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/calculator", methods=["GET","POST"])
+
+def calculator():
+    result = None
+    error = None
+
+    if request.method == "POST":
+        raw_input1 = request.form.get("input1", "")
+        raw_input2 = request.form.get("input2", "")
+        math_type = request.form.get("math_type", "")
+
+
+        try:
+            input1 = float(raw_input1)
+            input2 = float(raw_input2)
+        except ValueError:
+            error = "Please enter valid numbers."
+        else:
+            if math_type == "add":
+                result = calc_add(input1, input2)
+                
+            elif math_type == 'subtract':
+                result = calc_sub(input1, input2)
+                
+            elif math_type == "multiply":
+                result = calc_mult(input1, input2)
+                
+            elif math_type == "divide":
+                if input2 == 0:
+                    error = "Cannot divide by zero."
+                else:
+                    result = calc_divide(input1, input2)
+            
+
+    return render_template("calculator.html", result=result, error=error)
+        
+
+
+
+def calc_add(input1, input2):
+    sol_add = input1 + input2
+
+    return sol_add
+
+def calc_sub(input1, input2):
+    sol_subtract = input1 - input2
+    return sol_subtract
+
+def calc_mult(input1, input2):
+    sol_mult = input1 * input2
+    return sol_mult
+
+def calc_divide(input1, input2):
+    sol_divide = input1 / input2
+    return sol_divide
+
